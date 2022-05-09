@@ -1,0 +1,105 @@
+/* :root {
+  --blue: #2f478f;
+  --white: #fff;
+  --aqua: #3dcab5;
+  --grey: #8da3b0;
+  --lightgrey: #cbcbcb;
+} */
+
+.loginUser {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginFormWrapper {
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  width: 80vw;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.fieldWrapper {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.fieldWrapper:not(:first-of-type) {
+  margin-top: 2rem;
+}
+
+.l-form legend {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 1rem 0;
+  color: var(--white);
+  text-align: center;
+}
+
+.l-form label {
+  position: absolute;
+  height: 16px;
+  background-color: var(--blue);
+  color: var(--white);
+  top: -0.8rem;
+  margin-left: 10px;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.l-form input {
+  display: block;
+  width: 100%;
+  padding: 1rem 0.5rem 0.8rem 0.5rem;
+  margin-top: 0.3rem;
+
+  background-color: var(--blue);
+  border: 2px solid var(--white);
+
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.l-form input:focus {
+  outline: none;
+  border: 2px solid var(--aqua);
+}
+
+.submitBtn {
+  display: flex;
+  background-color: var(--aqua);
+  border: none;
+  border-radius: 3px;
+  padding: 0.75rem 2rem;
+  margin: 1.25rem 0 1rem 0;
+
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.38);
+
+  font-family: var(--secondaryFont);
+  font-weight: bold;
+  color: var(--white);
+}
+
+.loginError,
+.pleaseRegister {
+  color: var(--white);
+  text-align: center;
+}
+
+.pleaseRegister a {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid var(--aqua);
+}
+
+.l-form input::placeholder {
+  color: var(--white);
+  opacity: 0.5;
+}

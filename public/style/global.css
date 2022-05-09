@@ -1,3 +1,27 @@
-h1 {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* base colors  */
+  --blue: #2f478f;
+  --white: #fff;
+  --aqua: #3dcab5;
+  --grey: #8da3b0;
+  --lightgrey: #cbcbcb;
+
+  /* fonts */
+  --mainFont: "Open Sans", sans-serif;
+  --secondaryFont: "Quicksand", sans-serif;
+}
+
+html {
+  font-family: var(--mainFont);
+}
+
+h1,
+h2 {
+  font-family: var(--secondaryFont);
 }

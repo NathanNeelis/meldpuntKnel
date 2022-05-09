@@ -8,8 +8,20 @@ const path = require("path"); // path for easy paths
 const app = express(); // save express to app variable
 const session = require("express-session"); // sessions for login cookie
 
+// database connection
+const connectMDB = require('./config/mongooseConfig') // load Mongoose config
+connectMDB(); // connect with database
+
 // routing
 const home = require("./pages/home");
+const login = require("./pages/login");
+const register = require("./pages/register");
+const registerPage = require("./pages/registerPage");
+const loginpost = require('./pages/loginpost')
+const logout = require('./pages/logout');
+
+// Utils
+const userRedirectLogin = require('./views/utils/userRedirectLogin');
 
 // Static path, compression, bodyparser and sessions
 app
@@ -28,7 +40,13 @@ app
     })
   );
 
-app.get("/", home);
+app.get("/", userRedirectLogin, home)
+    .get("/register", registerPage)
+    .get("/login", login)
+    .get("/logout", logout);
+
+app.post("/register", register)
+    .post("/login", loginpost);
 
 app.listen(port, () => {
   console.log(`Server is working at http://localhost:${port}`);

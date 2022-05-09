@@ -1,0 +1,58 @@
+<%- include('../molecules/head.ejs'); %>
+
+<main>
+  <section class="loginUser">
+    <div class="loginFormWrapper">
+      <form action="/login" class="l-form" id="login_form" method="POST">
+        <legend>Inloggen</legend>
+
+        <% if (error) { %>
+        <p class="loginError">
+          De combinatie van email en wachtwoord komt niet overeen
+        </p>
+        <div class="fieldWrapper">
+          <label for="loginEmail">E-mail adres</label>
+          <input
+            type="text"
+            name="loginEmail"
+            id="loginEmail"
+            value="<%= email %>"
+          />
+        </div>
+        <% } else {%>
+
+        <div class="fieldWrapper">
+          <label for="loginEmail">E-mailadres</label>
+          <input
+            type="text"
+            name="loginEmail"
+            id="loginEmail"
+            placeholder="E-mailadres"
+          />
+        </div>
+        %> <% } %>
+
+        <div class="fieldWrapper">
+          <label for="loginPassword">Wachtwoord</label>
+          <input
+            type="password"
+            name="loginPassword"
+            id="loginPassword"
+            placeholder="Wachtwoord"
+          />
+        </div>
+
+        <button form="login_form" type="submit" class="submitBtn">
+          Inloggen
+        </button>
+      </form>
+
+      <p class="pleaseRegister">
+        Nog geen account?
+        <a href="/register">Registreer hier</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<%- include('../molecules/footer.ejs'); %>
