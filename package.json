@@ -1,0 +1,34 @@
+{
+  "name": "meldpuntknel",
+  "version": "1.0.0",
+  "description": "afstudeeropdracht cmd",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo hello world",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanNeelis/meldpuntKnel.git"
+  },
+  "author": "Nathan Neelis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NathanNeelis/meldpuntKnel/issues"
+  },
+  "homepage": "https://github.com/NathanNeelis/meldpuntKnel#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "compression": "^1.7.4",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.3.2",
+    "node-fetch": "^3.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
