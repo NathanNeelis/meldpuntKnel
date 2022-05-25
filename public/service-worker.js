@@ -4,9 +4,7 @@ const CORE_ASSETS = [
   // assets to save
   "/offline",
   "/images/app_icon/icon-192x192.png",
-  "/images/mountains.jpg",
   "/style/global.css",
-  "/style/header.css",
 ];
 
 self.addEventListener("install", (event) => {

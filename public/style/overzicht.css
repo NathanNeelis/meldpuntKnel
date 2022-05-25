@@ -1,3 +1,11 @@
+:root {
+  /* test  */
+  --bp: 0%;
+  --c0: #ffffff;
+  --c1: #2f478f;
+  --beddenPercentage: 65%;
+}
+
 .oz-wk {
   display: flex;
   flex-direction: column;
@@ -8,7 +16,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-top: 1rem;
+  margin-top: 1.5vh;
 }
 
 .totaalBedden {
@@ -32,7 +40,6 @@
 .beddenData {
   width: 9vw;
   height: 9vw;
-  border: 8px solid var(--white);
   border-radius: 50%;
 
   display: flex;
@@ -42,6 +49,40 @@
   font-size: 2vw;
   font-weight: 100;
   margin-top: 1rem;
+
+  position: relative;
+}
+
+.beddenData {
+  background: conic-gradient(
+    var(--white) var(--beddenPercentage),
+    var(--blue) 0
+  );
+}
+
+@supports (background: paint(houdini)) {
+  .beddenData {
+    background: conic-gradient(var(--white), var(--pos, 0%), var(--blue) 0);
+    border-radius: 50%;
+    animation: 0s 1;
+    animation-duration: 2s, 1s;
+    animation-timing-function: steps(1), ease-in-out;
+    animation-fill-mode: forwards;
+    animation-name: c0, posDaily;
+  }
+}
+
+.beddenData::before {
+  content: "";
+  width: 7.5rem;
+  height: 7.5rem;
+  position: absolute;
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+.beddenData p {
+  z-index: 10;
 }
 
 .opnames,
@@ -53,4 +94,16 @@
 .ontslagen img {
   margin-top: 0.7rem;
   width: 1.8vw;
+}
+
+@keyframes posDaily {
+  to {
+    --pos: var(--beddenPercentage);
+  }
+}
+
+@keyframes c0 {
+  50% {
+    --c0: #ffffff;
+  }
 }

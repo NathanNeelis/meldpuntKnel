@@ -10,7 +10,13 @@ const verbeterWrapper = document.getElementById("innovation");
 const profielWrapper = document.getElementById("profile");
 
 overzichtWrapper.addEventListener("mousemove", (e) => {
-  console.log("mousemove in overzicht");
+  navOverzicht.classList.add("nav_active");
+  navAgenda.classList.remove("nav_active");
+  navVerbeteren.classList.remove("nav_active");
+  navProfiel.classList.remove("nav_active");
+});
+
+navOverzicht.addEventListener("click", (e) => {
   navOverzicht.classList.add("nav_active");
   navAgenda.classList.remove("nav_active");
   navVerbeteren.classList.remove("nav_active");
@@ -24,7 +30,21 @@ agendaWrapper.addEventListener("mousemove", (e) => {
   navProfiel.classList.remove("nav_active");
 });
 
+navAgenda.addEventListener("click", (e) => {
+  navOverzicht.classList.remove("nav_active");
+  navAgenda.classList.add("nav_active");
+  navVerbeteren.classList.remove("nav_active");
+  navProfiel.classList.remove("nav_active");
+});
+
 verbeterWrapper.addEventListener("mousemove", (e) => {
+  navOverzicht.classList.remove("nav_active");
+  navAgenda.classList.remove("nav_active");
+  navVerbeteren.classList.add("nav_active");
+  navProfiel.classList.remove("nav_active");
+});
+
+navVerbeteren.addEventListener("click", (e) => {
   navOverzicht.classList.remove("nav_active");
   navAgenda.classList.remove("nav_active");
   navVerbeteren.classList.add("nav_active");
@@ -37,6 +57,10 @@ profielWrapper.addEventListener("mousemove", (e) => {
   navVerbeteren.classList.remove("nav_active");
   navProfiel.classList.add("nav_active");
 });
-// agendaWrapper.addEventListener("mousemove", updateNav("navAgenda"));
-// verbeterWrapper.addEventListener("mousemove", updateNav("navVerbeteren"));
-// profielWrapper.addEventListener("mousemove", updateNav("navProfiel"));
+
+navProfiel.addEventListener("click", (e) => {
+  navOverzicht.classList.remove("nav_active");
+  navAgenda.classList.remove("nav_active");
+  navVerbeteren.classList.remove("nav_active");
+  navProfiel.classList.add("nav_active");
+});
