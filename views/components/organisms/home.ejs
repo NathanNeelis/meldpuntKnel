@@ -2,5 +2,22 @@
 
 <body>
   <%- include('../molecules/header.ejs'); %>
-  <main></main>
+  <main>
+    <div class="scroll-container">
+      <!-- overzicht -->
+      <%- include('../molecules/overzicht.ejs'); %>
+
+      <!-- agenda -->
+      <%- include('../molecules/agenda.ejs'); %>
+
+      <!-- verbeteren -->
+      <%- include('../molecules/verbeteren.ejs'); %>
+
+      <!-- profiel -->
+      <%- include('../molecules/profiel.ejs'); %>
+
+      <!-- profiel -->
+      <%- include('../atoms/empty-footer.ejs'); %>
+    </div>
+  </main>
 </body>

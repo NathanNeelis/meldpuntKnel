@@ -1,12 +1,21 @@
+header {
+  position: sticky;
+  top: 2rem;
+  z-index: 999;
+}
+
 .headerWrapper {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   height: 2.5rem;
   background-color: var(--blue);
   width: 100vw;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  /* z-index: 3; */
 }
 
 .helloUser {
@@ -81,11 +90,16 @@
 /* NAVIGATIE  */
 
 nav {
-  width: 12rem;
-  /* background: purple; */
-  padding: 2rem;
-  position: absolute;
+  position: sticky;
   top: 5rem;
+  z-index: 999;
+}
+
+.navWrapper {
+  width: 15vw;
+  padding-left: 2rem;
+  /* background: purple; */
+  position: absolute;
 }
 
 nav li svg {
@@ -107,6 +121,13 @@ nav li svg {
   fill: var(--aqua);
 }
 
+.nav_active .st0,
+.nav_active .st1,
+.nav_active .st2,
+.nav_active .st3 {
+  fill: var(--aqua);
+}
+
 nav li {
   display: flex;
   margin: 2rem 0;
@@ -116,14 +137,29 @@ nav li {
   text-decoration: none;
   color: var(--grey);
   display: flex;
-  flex-direction: roew;
+  flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
   transition: color ease-in-out 0.3s;
   font-weight: 600;
 }
 
 .nav:hover a {
   color: var(--aqua);
+}
+
+.nav_active a {
+  color: var(--aqua);
+}
+
+.nav_active::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  height: 2.5rem;
+  width: 1rem;
+  border-right: 3px solid var(--aqua);
 }
 
 .navName {
