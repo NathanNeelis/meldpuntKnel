@@ -1,23 +1,24 @@
 <%- include('../molecules/head.ejs'); %>
 
-<body>
-  <%- include('../molecules/header.ejs'); %>
-  <main>
-    <div class="scroll-container">
-      <!-- overzicht -->
-      <%- include('../molecules/overzicht.ejs'); %>
+<!-- header  -->
+<%- include('../molecules/header.ejs'); %>
+<main>
+  <div class="scroll-container">
+    <!-- overzicht -->
+    <%- include('../molecules/overzicht.ejs'); %>
 
-      <!-- agenda -->
-      <%- include('../molecules/agenda.ejs'); %>
+    <!-- agenda -->
+    <%- include('../molecules/agenda.ejs'); %>
 
-      <!-- verbeteren -->
-      <%- include('../molecules/verbeteren.ejs'); %>
+    <!-- verbeteren -->
+    <%- include('../molecules/verbeteren.ejs'); %>
 
-      <!-- profiel -->
-      <%- include('../molecules/profiel.ejs'); %>
+    <!-- profiel -->
+    <%- include('../molecules/profiel.ejs'); %>
 
-      <!-- profiel -->
-      <%- include('../atoms/empty-footer.ejs'); %>
-    </div>
-  </main>
-</body>
+    <!-- profiel -->
+    <%- include('../atoms/empty-footer.ejs'); %>
+  </div>
+</main>
+
+<%- include('../molecules/footer.ejs'); %>

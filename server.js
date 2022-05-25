@@ -19,6 +19,7 @@ const register = require("./pages/register");
 const registerPage = require("./pages/registerPage");
 const loginpost = require('./pages/loginpost')
 const logout = require('./pages/logout');
+const offline = require('./pages/offline');
 
 // Utils
 const userRedirectLogin = require('./views/utils/userRedirectLogin');
@@ -43,7 +44,8 @@ app
 app.get("/", userRedirectLogin, home)
     .get("/register", registerPage)
     .get("/login", login)
-    .get("/logout", logout);
+    .get("/logout", logout)
+    .get("/offline", offline);
 
 app.post("/register", register)
     .post("/login", loginpost);

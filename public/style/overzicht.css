@@ -1,0 +1,56 @@
+.oz-wk {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.oz-wk-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.totaalBedden {
+  width: 55%;
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.oz-wk-info {
+  width: 45%;
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.beddenData {
+  width: 9vw;
+  height: 9vw;
+  border: 8px solid var(--white);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2vw;
+  font-weight: 100;
+  margin-top: 1rem;
+}
+
+.opnames,
+.ontslagen {
+  height: calc(min(7rem, 14vh));
+}
+
+.opnames img,
+.ontslagen img {
+  margin-top: 0.7rem;
+  width: 1.8vw;
+}
