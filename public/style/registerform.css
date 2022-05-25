@@ -1,0 +1,88 @@
+.registerUser {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formWrapper {
+  border: 1px solid var(--blue);
+  background-color: var(--blue);
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  width: 80vw;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.r-form fieldset {
+  border: none;
+}
+
+.formWrapper h2 {
+  color: white;
+  margin: 1rem 0;
+}
+
+.r-form legend {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 1rem 0;
+  color: var(--white);
+  text-align: center;
+}
+
+.r-form p {
+  color: var(--white);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.r-form label {
+  position: absolute;
+  height: 16px;
+  background-color: var(--blue);
+  color: var(--white);
+  top: -0.8rem;
+  margin-left: 10px;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.r-form input {
+  display: block;
+  width: 100%;
+  padding: 1rem 0.5rem 0.8rem 0.5rem;
+  margin-top: 0.3rem;
+
+  background-color: var(--blue);
+  border: 2px solid var(--white);
+
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.r-form input:focus {
+  outline: none;
+  border: 2px solid var(--aqua);
+}
+
+.redirectLogin {
+  color: var(--white);
+}
+
+.redirectLogin a {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 3px solid var(--aqua);
+}
+
+/* BREAK POINTS */
+@media all and (min-width: 40rem) {
+  .formWrapper {
+    width: calc(min(25rem, 100%));
+  }
+}

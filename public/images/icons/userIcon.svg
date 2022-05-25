@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve">
+<style type="text/css">
+	.Slagschaduw{fill:none;}
+	.Afgeronde_x0020_hoeken_x0020_2_x0020_pt{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.X_x0020_actief_x0020_weerspiegelen{fill:none;}
+	.Zachte_x0020_schuine_x0020_kant{fill:url(#SVGID_1_);}
+	.Schemering{fill:#FFFFFF;}
+	.Gebladerte_AS{fill:#FFDD00;}
+	.Pompadoer_AS{fill-rule:evenodd;clip-rule:evenodd;fill:#51AEE2;}
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#2F4890;}
+	.st2{opacity:0.1;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0.7071" y2="0.7071">
+	<stop  offset="0" style="stop-color:#E6E6EB"/>
+	<stop  offset="0.1738" style="stop-color:#E2E2E6"/>
+	<stop  offset="0.352" style="stop-color:#D5D4D8"/>
+	<stop  offset="0.5323" style="stop-color:#C0BFC2"/>
+	<stop  offset="0.7139" style="stop-color:#A4A2A4"/>
+	<stop  offset="0.8949" style="stop-color:#828282"/>
+	<stop  offset="1" style="stop-color:#6B6E6E"/>
+</linearGradient>
+<g>
+	<circle class="st0" cx="60" cy="60" r="59.1"/>
+	<path class="st1" d="M60,1.4c32.3,0,58.6,26.3,58.6,58.6S92.3,118.6,60,118.6S1.4,92.3,1.4,60S27.7,1.4,60,1.4 M60,0.4
+		C27.1,0.4,0.4,27.1,0.4,60s26.7,59.6,59.6,59.6s59.6-26.7,59.6-59.6S92.9,0.4,60,0.4L60,0.4z"/>
+</g>
+<g class="st2">
+	<defs>
+		<circle id="SVGID_00000116940508837980226370000002795333860520058786_" class="st2" cx="60" cy="60" r="59.6"/>
+	</defs>
+	<clipPath id="SVGID_00000164480332964112386700000014054318142432597130_">
+		<use xlink:href="#SVGID_00000116940508837980226370000002795333860520058786_"  style="overflow:visible;"/>
+	</clipPath>
+	
+		<g transform="matrix(1 0 0 1 0 -3.814697e-06)" style="clip-path:url(#SVGID_00000164480332964112386700000014054318142432597130_);">
+		
+			<image style="overflow:visible;" width="4032" height="3024" xlink:href="../../../../Desktop/foto/IMG_8031 2.JPG"  transform="matrix(9.520720e-02 0 0 9.520720e-02 -72.6261 -51.6061)">
+		</image>
+	</g>
+</g>
+</svg>

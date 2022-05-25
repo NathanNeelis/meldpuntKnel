@@ -85,6 +85,25 @@
   font-family: var(--secondaryFont);
   font-weight: bold;
   color: var(--white);
+  overflow: hidden;
+  position: relative;
+}
+
+.submitBtn:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  clip-path: polygon(10% 0, 70% 0, 90% 100%, 30% 100%);
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 300ms ease;
+}
+
+.submitBtn:hover::after {
+  left: 100%;
 }
 
 .loginError,
@@ -96,10 +115,21 @@
 .pleaseRegister a {
   color: var(--white);
   text-decoration: none;
-  border-bottom: 1px solid var(--aqua);
+  border-bottom: 3px solid var(--aqua);
 }
 
-.l-form input::placeholder {
+input::placeholder {
   color: var(--white);
   opacity: 0.5;
+}
+
+@media all and (min-width: 40rem) {
+  .loginFormWrapper {
+    border: 1px solid var(--blue);
+    background-color: var(--blue);
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    width: calc(min(25rem, 100%));
+    margin: 0 auto;
+    border-radius: 10px;
+  }
 }

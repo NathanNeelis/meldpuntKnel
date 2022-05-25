@@ -6,6 +6,8 @@ async function home(req, res) {
     email: req.session.user.user.email,
   });
 
+  const initials = user.firstName.charAt(0) + user.lastName.charAt(0);
+
   renderPage();
 
   function renderPage() {
@@ -13,6 +15,7 @@ async function home(req, res) {
       // data
       userFirstName: user.firstName,
       userLastName: user.lastName,
+      userInitials: initials,
     });
   }
 }

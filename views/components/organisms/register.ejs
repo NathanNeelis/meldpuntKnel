@@ -2,43 +2,68 @@
 
 <main>
   <section class="registerUser">
-    <div>
+    <div class="formWrapper">
       <form action="/register" class="r-form" id="register_form" method="POST">
-        <h2>Registreren bij Meldpunt Knel</h2>
+        <!-- <h2>Registreren bij Meldpunt Knel</h2> -->
         <fieldset>
-          <legend>Account informatie</legend>
-          <p>Deze informatie is nodig om de registratie te voltooien</p>
+          <legend>Registreren</legend>
+          <!-- <p>Deze informatie is nodig om de registratie te voltooien</p> -->
           <!-- username / email  -->
-          <label for="signupMail">e-mailadres</label>
-          <input
-            type="email"
-            id="signupMail"
-            name="signupMail"
-            placeholder="e-mailadres"
-            required
-          />
+          <div class="fieldWrapper">
+            <label for="signupMail">e-mailadres</label>
+            <input
+              type="email"
+              id="signupMail"
+              name="signupMail"
+              placeholder="example@wijkkliniek.com"
+              required
+            />
+          </div>
 
           <!-- password -->
-          <label for="signupPassword">wachtwoord</label>
-          <input
-            type="password"
-            id="signupPassword"
-            name="signupPassword"
-            placeholder="wachtwoord"
-            required
-          />
+          <div class="fieldWrapper">
+            <label for="signupPassword">wachtwoord</label>
+            <input
+              type="password"
+              id="signupPassword"
+              name="signupPassword"
+              placeholder="wachtwoord"
+              required
+            />
+          </div>
 
           <!-- first name  -->
-          <label for="firstName">voornaam</label>
-          <input type="text" id="firstName" name="firstName" required />
-
+          <div class="fieldWrapper">
+            <label for="firstName">voornaam</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="Wat is je voornaam?"
+              required
+            />
+          </div>
           <!-- last name -->
-          <label for="lastName">achternaam</label>
-          <input type="text" id="lastName" name="lastName" required />
-
+          <div class="fieldWrapper">
+            <label for="lastName">achternaam</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Wat is je achternaam?"
+              required
+            />
+          </div>
           <!-- experience  -->
-          <label for="experience">expertise</label>
-          <input type="text" id="experience" name="experience" />
+          <div class="fieldWrapper">
+            <label for="experience">expertise</label>
+            <input
+              type="text"
+              id="experience"
+              name="experience"
+              placeholder="Delier, valpreventie, voeding, etc.."
+            />
+          </div>
         </fieldset>
 
         <button form="register_form" type="submit" class="submitBtn">

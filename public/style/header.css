@@ -1,0 +1,133 @@
+.headerWrapper {
+  margin-top: 2rem;
+  height: 2.5rem;
+  background-color: var(--blue);
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.helloUser {
+  color: var(--white);
+  margin-left: 2rem;
+}
+
+.arrowBtn svg {
+  fill: var(--white);
+  max-width: 0.75rem;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  /* width: 10rem; */
+}
+
+.arrowBtn {
+  background-color: var(--aqua);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.75rem;
+  transition: all ease-in-out 0.3s;
+}
+
+.arrowBtn:hover {
+  transform: scale(1.2);
+}
+
+.userImage a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+  border: 3px solid var(--blue);
+  border-radius: 50%;
+  background-color: var(--white);
+  transition: all ease-in-out 0.3s;
+}
+
+.userImageBg {
+  width: 5rem;
+  opacity: 25%;
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+.initials {
+  position: absolute;
+  color: var(--blue);
+  font-family: var(--secondaryFont);
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: all ease-in-out 0.3s;
+}
+.userImage a:hover {
+  border-color: var(--aqua);
+}
+.userImage a:hover .initials {
+  color: var(--aqua);
+}
+
+/* NAVIGATIE  */
+
+nav {
+  width: 12rem;
+  /* background: purple; */
+  padding: 2rem;
+  position: absolute;
+  top: 5rem;
+}
+
+nav li svg {
+  width: 2.5rem;
+}
+
+.st0,
+.st1,
+.st2,
+.st3 {
+  fill: var(--grey);
+  transition: all ease-in-out 0.3s;
+}
+
+.navOverzicht:hover .st0,
+.navAgenda:hover .st1,
+.navVerbeteren:hover .st2,
+.navProfiel:hover .st3 {
+  fill: var(--aqua);
+}
+
+nav li {
+  display: flex;
+  margin: 2rem 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--grey);
+  display: flex;
+  flex-direction: roew;
+  justify-content: flex-start;
+  transition: color ease-in-out 0.3s;
+  font-weight: 600;
+}
+
+.nav:hover a {
+  color: var(--aqua);
+}
+
+.navName {
+  display: flex;
+  align-items: center;
+  margin-left: 0.75rem;
+}
