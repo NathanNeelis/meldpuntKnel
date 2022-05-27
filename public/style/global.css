@@ -33,3 +33,11 @@ h2 {
 h4 {
   font-size: 1.2rem;
 }
+
+p {
+  font-weight: 200;
+}
+
+.vp-btn {
+  margin: 0;
+}

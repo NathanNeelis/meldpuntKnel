@@ -1,13 +1,110 @@
 <section class="profielWrapper" id="profile">
   <div class="lc-profiel">
     <h2>Persoonlijke informatie</h2>
+
+    <div class="pers-info">
+      <dl>
+        <div class="pr-user-name">
+          <dt>Naam</dt>
+          <dd><%=userFirstName %> <%=userLastName %></dd>
+        </div>
+
+        <div class="pr-user-functie">
+          <dt>Functie</dt>
+          <dd><%=userFunctie %></dd>
+        </div>
+
+        <div class="pr-user-email">
+          <dt>Email</dt>
+          <dd><%=userEmail %></dd>
+        </div>
+      </dl>
+    </div>
+
+    <h4>Expertise</h4>
+    <div class="pr-expertise-wrapper">
+      <% for (let i = 0; i < userExpertise.length; i++) { %>
+      <div class="pr-expertise">
+        <p><%= userExpertise[i] %></p>
+      </div>
+      <% } %>
+      <div class="addBtn"><%- include('../atoms/plusSvg.ejs'); %></div>
+    </div>
   </div>
 
   <div class="mc-profiel">
     <h2>Jouw meldingen</h2>
+    <div class="lc-verbeteren-wrapper">
+      <div class="verb-notification">
+        <p class="verb-notification-text"></p>
+      </div>
+
+      <div class="searchbar">
+        <form action="">
+          <input
+            type="text"
+            class="searchbar"
+            placeholder="zoeken naar verbazingen"
+          />
+        </form>
+        <!-- when to submit?? -->
+      </div>
+
+      <div class="lc-nieuwe-verbazing">
+        <div class="addBtn"><%- include('../atoms/plusSvg.ejs'); %></div>
+        <p>nieuwe verbazing melden</p>
+      </div>
+
+      <!-- verbazing -->
+      <%- include('../atoms/verbazing.ejs'); %>
+    </div>
+
+    <!-- FOOTER  -->
+    <div class="pr-footer-wrapper">
+      <div class="pr-rc-footer">
+        <div class="pr-rc-active-verb">
+          <p>
+            jij hebt al <span class="pr-rc-number">3</span> verbazingen gemeld
+          </p>
+        </div>
+
+        <div class="pr-rc-successen">
+          <p>
+            jij hebt al <span class="pr-rc-number">2</span> successen gemeld
+          </p>
+        </div>
+
+        <div class="pr-rc-verbeteringen">
+          <p>
+            jij hebt al <span class="pr-rc-number">1</span> verbazingen
+            verbeterd
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="rc-profiel">
     <h2>Betrokken in projecten</h2>
+
+    <div class="rc-profiel-wrapper">
+      <div class="verb-notification">
+        <p class="vbp-notification-text"></p>
+      </div>
+
+      <div class="searchbar">
+        <form action="">
+          <input
+            type="text"
+            class="searchbar"
+            placeholder="zoeken naar projecten"
+          />
+        </form>
+        <!-- when to submit?? -->
+      </div>
+
+      <!-- verbeterprojecten -->
+      <%- include('../atoms/verbeterprojecten.ejs'); %>
+    </div>
   </div>
 </section>

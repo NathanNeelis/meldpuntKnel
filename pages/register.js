@@ -19,6 +19,7 @@ function register(req, res, next) {
             password: req.body.signupPassword,
             firstName: req.body.firstName,
             lastName: req.body.lastName,
+            functie: req.body.functie,
             expertise: req.body.experience,
           },
           done

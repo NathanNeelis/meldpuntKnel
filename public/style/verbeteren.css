@@ -9,6 +9,10 @@
   position: relative;
 }
 
+.verbeterenWrapper h2 {
+  color: var(--blue);
+}
+
 .lc-verbeteren-wrapper {
   width: 80%;
 }
@@ -137,7 +141,8 @@
   border-radius: 50%;
 }
 
-.verb-user {
+.verb-user,
+.vp-user {
   width: 2rem;
   height: 2rem;
   background-color: var(--white);
@@ -183,6 +188,8 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+/* -----------------  successen  -----------------  */
 
 .successen {
   background-color: var(--blue);
@@ -254,4 +261,66 @@
 .successen:hover::after,
 .verbazing-active:hover::after {
   opacity: 1;
+}
+
+/* -----------------  verbeterprojecten  -----------------  */
+.verbeter-project {
+  background-color: var(--blue);
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.27);
+
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+.vp-header-wrapper {
+  color: var(--white);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.vp-header-wrapper .icEvaluatie {
+  width: 2rem;
+}
+
+.vp-user-wrapper {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.vp-user:nth-child(2) {
+  margin-left: -0.5rem;
+}
+
+.vp-date {
+  color: var(--white);
+  padding-left: 0.5rem;
+}
+
+.vp-info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0.75rem 0 0 0;
+
+  color: var(--white);
+}
+
+.vp-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.vp-details p {
+  margin-top: 1rem;
+  font-weight: 200;
 }

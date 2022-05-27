@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  functie: {
+    type: String,
+    required: true,
+  },
   expertise: {
     type: String,
     required: false,

@@ -9,6 +9,7 @@ async function home(req, res) {
 
   const initials = user.firstName.charAt(0) + user.lastName.charAt(0);
   const currentDate = getCurrentDate();
+  const expertise = user.expertise.split(",");
 
   renderPage();
 
@@ -17,7 +18,10 @@ async function home(req, res) {
       // data
       userFirstName: user.firstName,
       userLastName: user.lastName,
+      userEmail: user.email,
+      userFunctie: user.functie,
       userInitials: initials,
+      userExpertise: expertise,
       currentDate: currentDate,
     });
   }
