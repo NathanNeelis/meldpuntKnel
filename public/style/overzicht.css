@@ -10,13 +10,34 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  overflow-y: scroll;
+}
+
+/* width */
+.oz-wk::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.oz-wk::-webkit-scrollbar-track {
+  background: var(--blue);
+}
+
+/* Handle */
+.oz-wk::-webkit-scrollbar-thumb {
+  background: var(--blue);
+}
+
+/* Handle on hover */
+.oz-wk::-webkit-scrollbar-thumb:hover {
+  background: var(--grey);
 }
 
 .oz-wk-wrapper {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-top: 1.5vh;
+  margin-top: 2rem;
 }
 
 .totaalBedden {
@@ -74,8 +95,8 @@
 
 .beddenData::before {
   content: "";
-  width: 7.5rem;
-  height: 7.5rem;
+  width: 7.5vw;
+  height: 7.5vw;
   position: absolute;
   background: var(--blue);
   border-radius: 50%;
@@ -87,7 +108,7 @@
 
 .opnames,
 .ontslagen {
-  height: calc(min(7rem, 14vh));
+  height: calc(min(6rem, 14vh));
 }
 
 .opnames img,
@@ -106,4 +127,386 @@
   50% {
     --c0: #ffffff;
   }
+}
+
+/* -----------------  INCIDENTEN  -----------------  */
+/* check content.css for more oz-incidenten styling  */
+.oz-incidenten {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: scroll;
+}
+
+.ic-val {
+  width: calc(100% - 4rem);
+  min-height: 3.5rem;
+  background-color: var(--blue);
+  position: relative;
+  margin-left: 2rem;
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  border-radius: 5px;
+}
+
+.ic-val::after {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--aqua);
+  background-image: url(/images/icons/arrowRight.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.75rem;
+
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ic-val:hover::after {
+  opacity: 1;
+
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.ic-meta {
+  display: flex;
+  flex-direction: row;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.ic-date {
+  padding: 0 0.75rem 0 2rem;
+}
+.ic-time {
+  padding: 0 0rem 0 0rem;
+}
+
+.ic-val img {
+  width: 2.5rem;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  background-color: white;
+
+  position: absolute;
+  top: 0.5rem;
+  left: -1rem;
+}
+
+.ic-val h4 {
+  color: var(--white);
+  padding-left: 2rem;
+  font-size: 1rem;
+}
+
+/* -----------------  Pauzes  -----------------  */
+/* check content.css for more oz-incidenten styling  */
+.oz-pauzes {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: scroll;
+}
+
+.pa-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.eerstePauze,
+.tweedePauze {
+  width: 50%;
+  /* background-color: burlywood; */
+  padding: 0.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pa-name {
+  font-size: 0.8rem;
+  font-weight: 100;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+
+.pa-name-available {
+  font-size: 0.8rem;
+  font-weight: 100;
+  padding-left: 0.5rem;
+  color: var(--grey);
+  cursor: pointer;
+}
+
+.pa-name-available:hover,
+.pa-name:hover {
+  color: var(--aqua);
+  text-decoration: underline;
+}
+
+.eerstePauze h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pa-person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.pa-user-icon {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  background-color: var(--white);
+  transition: all ease-in-out 0.3s;
+}
+
+.pa-person-bgImage {
+  width: 2rem;
+  opacity: 25%;
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+.pa-initials {
+  position: absolute;
+  color: var(--blue);
+  font-family: var(--secondaryFont);
+  font-weight: 700;
+  font-size: 0.6rem;
+  transition: all ease-in-out 0.3s;
+}
+
+.pa-wrapper hr {
+  border: 1px solid var(--grey);
+  margin: 5% 0 10% 0;
+}
+
+/* -----------------  Meldingen  -----------------  */
+/* check content.css for more oz-incidenten styling  */
+
+.rc-overzicht {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.rc-overzicht-header {
+  background-color: var(--white);
+  padding: 0.5rem 0 2rem 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  z-index: 3;
+}
+
+.rc-melding-wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rc-notification {
+  background-color: var(--blue);
+  width: 100%;
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.rc-notification p {
+  width: 75%;
+}
+
+.rc-noti-verb {
+  font-weight: 700;
+}
+
+.rc-notification::after,
+.rc-melding::after {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--aqua);
+  background-image: url(/images/icons/arrowRight.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.75rem;
+
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 0.75rem);
+  cursor: pointer;
+
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.rc-notification:hover::after,
+.rc-melding:hover::after {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.showArrow.rc-notification::after {
+  opacity: 1;
+}
+
+.rc-melding {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1rem;
+  opacity: 0.5;
+
+  transition: opacity 0.3s ease-in-out;
+}
+
+.rc-melding:hover {
+  opacity: 1;
+}
+
+.rc-melding-text {
+  font-size: 0.8rem;
+  padding-left: 0.75rem;
+  width: 75%;
+  color: var(--grey);
+}
+
+.rc-footer {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+
+  background-color: var(--white);
+  width: 100%;
+  height: 12rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.rc-active-verb,
+.rc-successen,
+.rc-verbeteringen {
+  background-color: var(--blue);
+  width: 32%;
+  height: 9rem;
+  margin: 0 0rem 2rem 0rem;
+  border-radius: 5px;
+  color: var(--white);
+  text-align: center;
+
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+}
+
+.rc-active-verb::after,
+.rc-successen::after {
+  content: "";
+  transform: scale(1) rotate(90deg);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--aqua);
+  background-image: url(/images/icons/arrowRight.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.75rem;
+
+  position: absolute;
+  left: calc(50% - 0.75rem);
+  bottom: -0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.rc-active-verb:hover::after,
+.rc-successen:hover::after {
+  transform: scale(1.2) rotate(90deg);
+}
+
+.rc-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0.3rem 0; */
+
+  font-size: 2.3rem;
+  font-weight: 800;
+}
+
+/* -----------------  Witte blokken scrollbar  -----------------  */
+
+/* width */
+.oz-incidenten::-webkit-scrollbar,
+.oz-pauzes::-webkit-scrollbar,
+.oz-visite::-webkit-scrollbar,
+.rc-overzicht::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.oz-incidenten::-webkit-scrollbar-track,
+.oz-pauzes::-webkit-scrollbar-track,
+.oz-visite::-webkit-scrollbar-track,
+.rc-overzicht::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+/* Handle */
+.oz-incidenten::-webkit-scrollbar-thumb,
+.oz-pauzes::-webkit-scrollbar-thumb,
+.oz-visite::-webkit-scrollbar-thumb,
+.rc-overzicht::-webkit-scrollbar-thumb {
+  background: var(--white);
+}
+
+/* Handle on hover */
+.oz-incidenten::-webkit-scrollbar-thumb:hover,
+.oz-pauzes::-webkit-scrollbar-thumb:hover,
+.oz-visite::-webkit-scrollbar-thumb:hover,
+.rc-overzicht::-webkit-scrollbar-thumb:hover {
+  background: var(--grey);
 }

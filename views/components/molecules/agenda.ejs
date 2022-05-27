@@ -1,13 +1,36 @@
 <section class="agendaWrapper" id="calender">
   <div class="lc-agenda">
-    <h2>Agenda</h2>
+    <div class="lc-agenda-header">
+      <img src="images/icons/ic-agenda.svg" alt="icon agenda" />
+      <h2>Agenda</h2>
+    </div>
+
+    <%- include('../atoms/agendapunten.ejs'); %>
+    <div class="btn-normalWrapper">
+      <div class="btn-normal">agendapunt toevoegen</div>
+    </div>
   </div>
 
   <div class="mc-agenda">
-    <h2>Mededelingen</h2>
+    <div class="lc-agenda-header">
+      <img src="images/icons/ic-mededelingen.svg" alt="icon agenda" />
+      <h2>Mededelingen</h2>
+    </div>
+    <%- include('../atoms/mededelingen.ejs'); %>
+
+    <div class="btn-normalWrapper">
+      <div class="btn-normal">mededeling toevoegen</div>
+    </div>
   </div>
 
   <div class="rc-agenda">
-    <h2>MDO's</h2>
+    <div class="lc-agenda-header">
+      <img src="images/icons/ic-mdo.svg" alt="icon agenda" />
+      <h2>MDO's</h2>
+    </div>
+    <%- include('../atoms/mdo.ejs'); %>
+    <div class="btn-normalWrapper">
+      <div class="btn-normal">een MDO plannen</div>
+    </div>
   </div>
 </section>

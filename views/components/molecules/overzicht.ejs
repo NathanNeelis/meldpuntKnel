@@ -3,51 +3,127 @@
     <div class="oz-wk">
       <h2>WijkKliniek</h2>
       <div class="oz-wk-wrapper">
-        <div class="totaalBedden">
-          <h4>Bedden</h4>
-          <div class="beddenData">
-            <div class="innercircle"></div>
-            <p><span class="pc">20</span>/23</p>
-          </div>
-        </div>
-
-        <div class="oz-wk-info">
-          <div class="opnames">
-            <h4>Opnames</h4>
-            <div>
-              <img src="images/icons/ic-person.svg" alt="icon for a person" />
-              <img src="images/icons/ic-person.svg" alt="icon for a person" />
-            </div>
-          </div>
-          <div class="ontslagen">
-            <h4>Ontslagen</h4>
-            <div>
-              <img src="images/icons/ic-person.svg" alt="icon for a person" />
-              <img src="images/icons/ic-person.svg" alt="icon for a person" />
-              <img src="images/icons/ic-person.svg" alt="icon for a person" />
-              <!-- <img src="images/icons/ic-person.svg" alt="icon for a person" /> -->
-              <!-- <img src="images/icons/ic-person.svg" alt="icon for a person" /> -->
-            </div>
-          </div>
-        </div>
+        <%- include('../atoms/wijkkliniek.ejs'); %>
       </div>
     </div>
 
     <div class="oz-incidenten">
       <h2>Incidenten</h2>
+      <%- include('../atoms/incidenten.ejs'); %>
+      <div class="btn-normalWrapper">
+        <div class="btn-normal">incident melden</div>
+      </div>
     </div>
   </div>
 
   <div class="lc-overzicht">
     <div class="oz-pauzes">
       <h2>Pauzes</h2>
+      <div class="pa-wrapper">
+        <div class="eerstePauze">
+          <h4>12:30</h4>
+          <div>
+            <%- include('../atoms/pa-person.ejs'); %> <%-
+            include('../atoms/pa-person.ejs'); %> <%-
+            include('../atoms/pa-person.ejs'); %><%-
+            include('../atoms/pa-empty.ejs'); %><%-
+            include('../atoms/pa-empty.ejs'); %>
+          </div>
+          <div class="btn-smallWrapper">
+            <div class="btn-small">kies eerste</div>
+          </div>
+        </div>
+        <hr />
+        <div class="tweedePauze">
+          <h4>13:00</h4>
+          <div>
+            <%- include('../atoms/pa-person.ejs'); %> <%-
+            include('../atoms/pa-person.ejs'); %> <%-
+            include('../atoms/pa-empty.ejs'); %> <%-
+            include('../atoms/pa-empty.ejs'); %> <%-
+            include('../atoms/pa-empty.ejs'); %>
+          </div>
+          <div class="btn-smallWrapper">
+            <div class="btn-small">kies tweede</div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="oz-visite">
       <h2>Visite</h2>
+      <div class="pa-wrapper">
+        <div class="eerstePauze">
+          <h4>10:15</h4>
+          <div>
+            <%- include('../atoms/pa-person.ejs'); %> <%-
+            include('../atoms/pa-person.ejs'); %> <%-
+            include('../atoms/pa-person.ejs'); %><%-
+            include('../atoms/pa-empty.ejs'); %><%-
+            include('../atoms/pa-empty.ejs'); %>
+          </div>
+          <div class="btn-smallWrapper">
+            <div class="btn-small">kies etage 1</div>
+          </div>
+        </div>
+        <hr />
+        <div class="tweedePauze">
+          <h4>10:15</h4>
+          <div>
+            <%- include('../atoms/pa-person.ejs'); %> <%-
+            include('../atoms/pa-person.ejs'); %> <%-
+            include('../atoms/pa-empty.ejs'); %> <%-
+            include('../atoms/pa-empty.ejs'); %> <%-
+            include('../atoms/pa-empty.ejs'); %>
+          </div>
+          <div class="btn-smallWrapper">
+            <div class="btn-small">kies etage 2</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="rc-overzicht">
-    <h2>Meldingen</h2>
+    <div class="rc-overzicht-header">
+      <h2>Meldingen</h2>
+    </div>
+
+    <div class="rc-melding-wrapper">
+      <div class="rc-notification showArrow">
+        <p class="rc-noti-text">
+          Voor verbazing
+          <span class="rc-noti-verb">“rapportages bespreken”</span> is nog
+          niemand verantwoordelijk
+        </p>
+      </div>
+
+      <%- include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %> <%-
+      include('../atoms/overzicht-melding.ejs'); %>
+
+      <div class="rc-footer">
+        <div class="rc-active-verb">
+          <p>er zijn nu <span class="rc-number">3</span> actieve verbazingen</p>
+        </div>
+
+        <div class="rc-successen">
+          <p>er zijn nu <span class="rc-number">2</span> successen</p>
+        </div>
+
+        <div class="rc-verbeteringen">
+          <p>er zijn <span class="rc-number">83</span> verbazingen verbeterd</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

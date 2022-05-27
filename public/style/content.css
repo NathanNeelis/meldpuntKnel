@@ -18,6 +18,7 @@
 .overzichtWrapper h2 {
   text-align: center;
   padding-top: 1rem;
+  color: var(--blue);
 }
 
 .lc-overzicht,
@@ -32,6 +33,7 @@
   box-shadow: 0px 0px 17px -1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   height: 78vh;
+  position: relative;
 }
 
 .oz-wk,
@@ -49,6 +51,10 @@
   margin-bottom: 4vh;
   color: var(--white);
   background-color: var(--blue);
+}
+
+.oz-wk h2 {
+  color: var(--white);
 }
 
 .oz-pauzes {

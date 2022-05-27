@@ -1,0 +1,164 @@
+.agendaWrapper h2 {
+  line-height: 0;
+  color: var(--blue);
+}
+
+.lc-agenda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.lc-agenda-header {
+  position: sticky;
+  left: 0;
+  top: 0;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-left: 10%;
+}
+
+.lc-agenda-header img {
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.ag-punten {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.agendapunt {
+  background-color: var(--blue);
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+
+  color: var(--white);
+}
+
+.agendapunt::after {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--aqua);
+  background-image: url(/images/icons/arrowRight.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.75rem;
+
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 0.75rem);
+  opacity: 0;
+  cursor: pointer;
+}
+
+.agendapunt:hover::after {
+  transform: scale(1.2);
+
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ag-subject {
+  font-weight: 200;
+}
+
+.ag-time {
+  font-weight: bold;
+  padding-right: 1rem;
+}
+
+.ic-timer {
+  fill: var(--aqua);
+}
+
+.ag-timer svg {
+  width: 1rem;
+  position: absolute;
+  right: 1.25rem;
+  top: calc(50% - 0.5rem);
+}
+
+.timerIcon:hover .ic-timer {
+  fill: var(--grey);
+}
+
+/* -----------------  Mededelingen  -----------------  */
+
+.mc-agenda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.med-source {
+  font-weight: bold;
+  padding-right: 1rem;
+}
+
+.med-date {
+  padding-right: 1rem;
+  font-weight: 200;
+}
+
+.med-subject {
+  font-weight: 200;
+}
+
+/* -----------------  Mededelingen  -----------------  */
+
+.rc-agenda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  position: relative;
+}
+
+/* -----------------  Witte blokken scrollbar  -----------------  */
+
+/* width */
+.lc-agenda::-webkit-scrollbar,
+.mc-agenda::-webkit-scrollbar,
+.rc-agenda::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.lc-agenda::-webkit-scrollbar-track,
+.mc-agenda::-webkit-scrollbar-track,
+.rc-agenda::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+/* Handle */
+.lc-agenda::-webkit-scrollbar-thumb,
+.mc-agenda::-webkit-scrollbar-thumb,
+.rc-agenda::-webkit-scrollbar-thumb {
+  background: var(--white);
+}
+
+/* Handle on hover */
+.lc-agenda::-webkit-scrollbar-thumb:hover,
+.mc-agenda::-webkit-scrollbar-thumb:hover,
+.rc-agenda::-webkit-scrollbar-thumb:hover {
+  background: var(--grey);
+}
