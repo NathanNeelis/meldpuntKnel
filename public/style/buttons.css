@@ -91,3 +91,22 @@
 .btn-small:hover::after {
   left: 100%;
 }
+
+/* add button  */
+.addBtn {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--aqua);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.addBtn svg {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--white);
+}

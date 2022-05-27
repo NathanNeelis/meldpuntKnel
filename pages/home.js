@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const getCurrentDate = require("../views/utils/getCurrentDate");
 
 // export
 async function home(req, res) {
@@ -7,6 +8,7 @@ async function home(req, res) {
   });
 
   const initials = user.firstName.charAt(0) + user.lastName.charAt(0);
+  const currentDate = getCurrentDate();
 
   renderPage();
 
@@ -16,6 +18,7 @@ async function home(req, res) {
       userFirstName: user.firstName,
       userLastName: user.lastName,
       userInitials: initials,
+      currentDate: currentDate,
     });
   }
 }
