@@ -1,0 +1,94 @@
+<div class="verbazingMelden">
+  <div class="standard-header">
+    <div class="blueBar">
+      <!-- <p>hello world</p> -->
+    </div>
+    <div class="backBtn" id="verbazingMeldenBack">
+      <img src="images/icons/arrowLeft.svg" alt="back icon" />
+    </div>
+  </div>
+
+  <div class="verbazingMelden-content">
+    <h2>Verbazingen melden</h2>
+
+    <div class="verb-melden-form-wrapper">
+      <form
+        action="/verbazing"
+        class="verb-melden-form"
+        id="verb-melden-form"
+        method="POST"
+      >
+        <!-- <h2>Registreren bij Meldpunt Knel</h2> -->
+        <fieldset>
+          <legend>Verbazing melden</legend>
+
+          <!-- Title-->
+          <div class="verb-melden-formfield-wrapper">
+            <div class="inner-formfield-wrapper">
+              <label for="title">Wat is de verbazing?</label>
+              <div class="inputIcon">
+                <input
+                  type="text"
+                  id="title"
+                  class="verb-melden-title"
+                  name="title"
+                  placeholder="Tik om een onderwerp toe te voegen"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="verb-melden-formfield-wrapper">
+            <div class="inner-formfield-wrapper">
+              <label for="situatie">Beschrijf de situatie</label>
+              <p class="form-tip">
+                Tip: voeg een foto of video toe om de situatie beter uit te
+                leggen
+              </p>
+              <div class="inputIcon">
+                <input
+                  type="text"
+                  id="situatie"
+                  name="situatie"
+                  placeholder="Tik om een beschrijving toe te voegen"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- call to action  -->
+          <div class="verb-melden-formfield-btn-wrapper">
+            <div class="inner-formfield-wrapper">
+              <div class="btn-normalWrapper-verb-melden">
+                <div class="btn-small">media toevoegen</div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="verb-melden-formfield-btn-wrapper">
+          <div class="attention">
+            <p class="attention-icon">💡</p>
+            <h4>Bespreek de verbazing!</h4>
+            <p class="attention-text">
+              Bespreek de verbazing tijdens het kwart voor twee momentje.
+              Overleg wie de verbazing wilt oppakken en kies een evaluatie
+              datum.
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="verb-melden-submitBtn-wrapper">
+    <button
+      form="verb-melden-form"
+      type="submit"
+      class="submitBtn verb-melden-submitBtn"
+    >
+      verbazing melden
+    </button>
+  </div>
+</div>

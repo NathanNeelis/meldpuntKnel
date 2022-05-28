@@ -110,3 +110,31 @@
   height: 1rem;
   fill: var(--white);
 }
+
+/* back button  */
+.backBtn {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--aqua);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.backBtn:hover {
+  transform: scale(1.2);
+}
+
+.backBtn img {
+  width: 1rem;
+  height: 1rem;
+}

@@ -1,0 +1,29 @@
+<div class="lc-verbeteren active">
+  <h2>Verbazingen</h2>
+  <div class="lc-verbeteren-wrapper">
+    <div class="verb-notification">
+      <p class="verb-notification-text">
+        Voor <span>1 </span> verbazing is nog niemand verantwoordelijk
+      </p>
+    </div>
+
+    <div class="searchbar">
+      <form action="">
+        <input
+          type="text"
+          class="searchbar"
+          placeholder="zoeken naar verbazingen"
+        />
+      </form>
+      <!-- when to submit?? -->
+    </div>
+
+    <div class="lc-nieuwe-verbazing">
+      <div class="addBtn"><%- include('../atoms/plusSvg.ejs'); %></div>
+      <p>nieuwe verbazing melden</p>
+    </div>
+
+    <!-- verbazing -->
+    <%- include('../atoms/verbazing.ejs'); %>
+  </div>
+</div>

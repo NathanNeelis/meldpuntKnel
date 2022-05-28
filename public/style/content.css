@@ -126,7 +126,8 @@
 
 .lc-verbeteren,
 .mc-verbeteren,
-.rc-verbeteren {
+.rc-verbeteren,
+.verbazingMelden {
   /* background-color: coral; */
   width: 26vw;
   position: relative;

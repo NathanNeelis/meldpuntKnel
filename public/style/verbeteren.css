@@ -1,4 +1,8 @@
-.lc-verbeteren,
+.lc-verbeteren {
+  display: none;
+}
+
+.lc-verbeteren.active,
 .mc-verbeteren,
 .rc-verbeteren {
   display: flex;
@@ -323,4 +327,202 @@
 .vp-details p {
   margin-top: 1rem;
   font-weight: 200;
+}
+
+/* -----------------  Verbazing melden  -----------------  */
+/* -----------------  Verbazing melden  -----------------  */
+/* -----------------  Verbazing melden  -----------------  */
+
+.verbazingMelden {
+  display: none;
+}
+
+.verbazingMelden.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+
+  background-color: #f5f5f5;
+}
+
+.verbazingMelden-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+  position: relative;
+
+  width: 100%;
+  padding-top: 1rem;
+}
+
+.standard-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--blue);
+  z-index: 3;
+}
+
+.blueBar {
+  width: calc(100%);
+  height: 2rem;
+  background-color: var(--blue);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.verb-melden-form-wrapper {
+  margin-top: 1rem;
+}
+
+/* FORM MELDEN  */
+
+.verb-melden-form fieldset {
+  border: none;
+}
+
+.verb-melden-form legend {
+  display: none;
+}
+
+.verb-melden-formfield-wrapper {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+.inner-formfield-wrapper {
+  width: 80%;
+}
+
+.verb-melden-form label {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.verb-melden-form input {
+  border: none;
+  position: relative;
+  padding: 1rem 0 1rem 1.5rem;
+  background-color: transparent;
+  width: 100%;
+}
+
+.verb-melden-form input::placeholder {
+  color: var(--lightgrey);
+  font-family: var(--mainFont);
+}
+
+.inputIcon {
+  position: relative;
+}
+
+.inputIcon::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.5rem);
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(/images/icons/ic-input.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1rem;
+}
+
+.verb-melden-formfield-btn-wrapper {
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.btn-normalWrapper-verb-melden {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.attention {
+  background-color: var(--blue);
+  border-radius: 5px;
+  width: 80%;
+
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
+
+.attention-icon {
+  font-size: 1.5rem;
+  margin: 0.3rem 0;
+}
+
+.attention h4 {
+  margin: 0.3rem 0;
+}
+
+.verb-melden-submitBtn-wrapper {
+  background: var(--white);
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+/* -----------------  Witte blokken scrollbar  -----------------  */
+
+/* width */
+.verbazingMelden-content::-webkit-scrollbar,
+.lc-verbeteren::-webkit-scrollbar,
+.mc-verbeteren::-webkit-scrollbar,
+.rc-verbeteren::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.verbazingMelden-content::-webkit-scrollbar-track,
+.lc-verbeteren::-webkit-scrollbar-track,
+.mc-verbeteren::-webkit-scrollbar-track,
+.rc-verbeteren::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+/* Handle */
+
+.lc-verbeteren::-webkit-scrollbar-thumb,
+.mc-verbeteren::-webkit-scrollbar-thumb,
+.rc-verbeteren::-webkit-scrollbar-thumb {
+  background: var(--white);
+}
+
+.verbazingMelden-content::-webkit-scrollbar-thumb {
+  background: var(--grey);
+}
+
+/* Handle on hover */
+.verbazingMelden-content::-webkit-scrollbar-thumb:hover,
+.lc-verbeteren::-webkit-scrollbar-thumb:hover,
+.mc-verbeteren::-webkit-scrollbar-thumb:hover,
+.rc-verbeteren::-webkit-scrollbar-thumb:hover {
+  background: var(--grey);
 }

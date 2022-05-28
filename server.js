@@ -20,6 +20,7 @@ const registerPage = require("./pages/registerPage");
 const loginpost = require('./pages/loginpost')
 const logout = require('./pages/logout');
 const offline = require('./pages/offline');
+const verbazingpost = require('./pages/verbazingpost');
 
 // Utils
 const userRedirectLogin = require('./views/utils/userRedirectLogin');
@@ -48,7 +49,8 @@ app.get("/", userRedirectLogin, home)
     .get("/offline", offline);
 
 app.post("/register", register)
-    .post("/login", loginpost);
+    .post("/login", loginpost)
+    .post("/verbazing", verbazingpost);
 
 app.listen(port, () => {
   console.log(`Server is working at http://localhost:${port}`);
