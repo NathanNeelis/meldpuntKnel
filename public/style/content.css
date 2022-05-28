@@ -127,7 +127,9 @@
 .lc-verbeteren,
 .mc-verbeteren,
 .rc-verbeteren,
-.verbazingMelden {
+.verbazingMelden,
+.verbazingDetails,
+.verbazingOverzicht {
   /* background-color: coral; */
   width: 26vw;
   position: relative;

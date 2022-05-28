@@ -103,6 +103,8 @@
   justify-content: center;
   align-items: center;
   margin-right: 1rem;
+
+  transition: all 0.3s ease-in-out;
 }
 
 .addBtn svg {

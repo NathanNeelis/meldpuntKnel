@@ -1,0 +1,214 @@
+<div class="verbazingDetails vl-melding-details active">
+  <div class="standard-header">
+    <div class="blueBar"></div>
+    <div class="backBtn backToVerbazingsOverzicht">
+      <img src="images/icons/arrowLeft.svg" alt="back icon" />
+    </div>
+  </div>
+
+  <div class="verbazingDetails-content">
+    <div class="verb-det-meta">
+      <div class="meta-lc">
+        <h2>Vochtlijsten</h2>
+        <div class="chip">
+          <p>verbazing</p>
+        </div>
+      </div>
+      <div class="meta-rc">
+        <div class="meta-totaalmeldingen">
+          <p><span>3</span> meldingen</p>
+        </div>
+        <div class="meta-status-nieuw status-voltooid">
+          <div class="meta-status-icon"></div>
+          <p>nieuw</p>
+        </div>
+        <div class="meta-status-opgepakt status-active">
+          <div class="meta-status-icon"></div>
+          <p>opgepakt</p>
+        </div>
+        <div class="meta-status-verbeterd status-onvoltooid">
+          <div class="meta-status-icon"></div>
+          <p>verbeterd</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="verb-melden-form-wrapper">
+      <form
+        action="/verbazing"
+        class="verb-melden-form"
+        id="verb-melden-form"
+        method="POST"
+      >
+        <div class="situatie-main-header">
+          <h4>Situatie</h4>
+        </div>
+
+        <!-- situatie-->
+        <div class="verb-melden-formfield-wrapper">
+          <div class="inner-formfield-wrapper">
+            <label for="situatie">Beschrijf de situatie</label>
+            <p class="form-tip">
+              Tip: voeg een foto of video toe om de situatie beter uit te leggen
+            </p>
+            <div class="inputIcon">
+              <input
+                type="text"
+                id="situatie"
+                name="situatie"
+                placeholder="Tik om een beschrijving toe te voegen"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- call to action  -->
+        <div class="verb-melden-formfield-btn-wrapper">
+          <div class="inner-formfield-wrapper">
+            <div class="btn-normalWrapper-verb-melden">
+              <div class="btn-small">media toevoegen</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="situatie-main-header">
+          <h4>Verbeteractie</h4>
+        </div>
+
+        <!-- verantwoordelijke toevoegen  -->
+        <div class="verb-melden-formfield-wrapper formfield-verantwoordelijke">
+          <div class="inner-formfield-wrapper">
+            <label for="verantwoordelijke"
+              >Verbazing wordt verbeterd door:</label
+            >
+            <p class="form-tip">
+              Bespreek in het team wie deze verbazing gaat verbeteren
+            </p>
+            <div class="verantwoordelijkeIcon">
+              <p>NN</p>
+              <input
+                type="text"
+                id="verantwoordelijke"
+                name="verantwoordelijke"
+                value="Nathan Neelis"
+                readonly
+              />
+            </div>
+
+            <!-- button verantwoordleijke  -->
+
+            <div class="verantwoordelijkeBtn-wrapper">
+              <div class="addBtn"><%- include('../atoms/plusSvg.ejs'); %></div>
+              <p>voeg iemand toe</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- omschrijving verbeteractie  -->
+        <div class="verb-melden-formfield-wrapper">
+          <div class="inner-formfield-wrapper">
+            <label for="omschrijving_verbeteractie"
+              >Beschrijf de verbeteractie</label
+            >
+            <p class="form-tip">
+              Tip: stel een realistisch doel en omschrijf dit in detail.
+            </p>
+            <div class="inputIcon">
+              <input
+                type="text"
+                id="omschrijving_verbeteractie"
+                name="omschrijving_verbeteractie"
+                placeholder="Tik om een beschrijving toe te voegen"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- wanneer slaagt de verbeteractie  -->
+        <div class="verb-melden-formfield-wrapper">
+          <div class="inner-formfield-wrapper">
+            <label for="omschrijving_geslaagd"
+              >Wanneer is de verbetactie geslaagd?</label
+            >
+            <p class="form-tip">
+              Tip: Maak het doel meetbaar of geef aan wat de voorwaarden zijn
+              voor het behalen van het doel.
+            </p>
+            <div class="inputIcon">
+              <input
+                type="text"
+                id="omschrijving_geslaagd"
+                name="omschrijving_geslaagd"
+                placeholder="Tik om een beschrijving toe te voegen"
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="situatie-main-header">
+          <h4>Evalueren</h4>
+        </div>
+
+        <!--evaluatie datum  -->
+        <div class="verb-melden-formfield-wrapper">
+          <div class="inner-formfield-wrapper">
+            <label for="evaluatie_datum"
+              >Wanneer is de verbetactie opgelost?</label
+            >
+            <p class="form-tip"></p>
+            <div class="inputTimer">
+              <input
+                type="text"
+                id="evaluatie_datum"
+                name="evaluatie_datum"
+                value="03-06-2022"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- her evaluatie datum  -->
+        <div class="verb-melden-formfield-wrapper">
+          <div class="inner-formfield-wrapper">
+            <label for="herevaluatie_datum">De verbazing evalueren op</label>
+            <p class="form-tip"></p>
+            <div class="inputTimer">
+              <input
+                type="text"
+                id="herevaluatie_datum"
+                name="herevaluatie_datum"
+                value="03-09-2022"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- evaluatie beschrijving  -->
+        <div class="verb-melden-formfield-wrapper">
+          <div class="inner-formfield-wrapper">
+            <label for="evaluatie">Is de situatie verbeterd?</label>
+            <p class="form-tip">
+              Tip: leg vast wat er tijdens de evaluatie besproken is
+            </p>
+
+            <!-- checkbox verbazing opgelost?  -->
+            <div class="inputIcon">
+              <input
+                type="text"
+                id="evaluatie"
+                name="evaluatie"
+                placeholder="Tik om een beschrijving toe te voegen"
+                required
+              />
+            </div>
+
+            <!-- checkbox succes vermedlen  -->
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

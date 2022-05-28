@@ -1,18 +1,26 @@
+const User = require("../models/user");
 const Verbazingen = require("../models/verbazing");
+const getCurrentDate = require("../views/utils/getCurrentDate");
 
 // register data to database
-function verbazingMelden(req, res, next) {
+async function verbazingMelden(req, res, next) {
+  const currentDate = getCurrentDate();
+  const user = await User.findOne({
+    email: req.session.user.user.email,
+  });
+
   const melding = {
-    melder: req.body.melder,
-    melding_datum: req.body.melding_datum,
+    melder: user.firstName + " " + user.lastName,
+    melding_datum: currentDate,
     situatie: req.body.situatie,
-    verantwoordelijke: req.body.verantwoordelijke,
-    omschrijving_verbeteractie: req.body.omschrijving_verbeteractie,
-    omschrijving_geslaagd: req.body.omschrijving_geslaagd,
-    evaluatie_datum: req.body.evaluatie_datum,
-    herevaluatie_datum: req.body.evaluatie_datum,
-    verbazing_status: req.body.verbazing_status,
-    vermelden: req.body.vermelden,
+    verantwoordelijke: "",
+    omschrijving_verbeteractie: "",
+    omschrijving_geslaagd: "",
+    evaluatie_datum: "",
+    herevaluatie_datum: "",
+    verbazing_status: 0,
+    vermelden: true,
+    evaluatie: "",
   };
 
   const meldingArray = [];
@@ -31,11 +39,11 @@ function verbazingMelden(req, res, next) {
           meldingError: "Er is al een verbazing met deze titel gemeld.",
         });
       } else {
-        Verbazing.create(
+        Verbazingen.create(
           {
             title: req.body.title,
             melding: meldingArray,
-            status: req.body.status,
+            status: 0,
           },
           done
         );

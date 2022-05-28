@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const Verbazingen = require("../models/verbazing");
 const getCurrentDate = require("../views/utils/getCurrentDate");
 
 // export
@@ -6,6 +7,9 @@ async function home(req, res) {
   const user = await User.findOne({
     email: req.session.user.user.email,
   });
+
+  const verbazingen = await Verbazingen.find();
+  console.log("verbazingen", verbazingen);
 
   const initials = user.firstName.charAt(0) + user.lastName.charAt(0);
   const currentDate = getCurrentDate();
@@ -23,6 +27,8 @@ async function home(req, res) {
       userInitials: initials,
       userExpertise: expertise,
       currentDate: currentDate,
+
+      verbazingen: verbazingen,
     });
   }
 }
