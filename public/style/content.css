@@ -129,7 +129,9 @@
 .rc-verbeteren,
 .verbazingMelden,
 .verbazingDetails,
-.verbazingOverzicht {
+.verbazingOverzicht,
+.inputPage,
+.inputPageVLER {
   /* background-color: coral; */
   width: 26vw;
   position: relative;
