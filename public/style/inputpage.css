@@ -1,10 +1,12 @@
 .inputPage,
-.inputPageVLER {
+.inputPageVLER,
+.inputPageRP {
   display: none;
 }
 
 .inputPage.active,
-.inputPageVLER.active {
+.inputPageVLER.active,
+.inputPageRP.active {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -44,16 +46,20 @@
   display: flex;
 }
 
+.tempInput.active:focus {
+  outline: none;
+}
+
 .tempInput::placeholder {
   font-family: var(--mainFont);
   color: var(--grey);
 }
-/* .blueBar {
-  width: calc(100%);
-  height: 2rem;
-  background-color: var(--blue);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+.annuleerInput,
+.annuleerInputVLER,
+.annuleerInputRP,
+.saveInput,
+.saveInputVLER,
+.saveInputRP {
+  cursor: pointer;
+}

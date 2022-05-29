@@ -1,4 +1,4 @@
-<div class="verbazingDetails vl-melding-er-details active">
+<div class="verbazingDetails vl-melding-er-details">
   <div class="standard-header">
     <div class="blueBar"></div>
     <div class="backBtn backToVerbazingsOverzicht">
@@ -52,13 +52,12 @@
               Tip: voeg een foto of video toe om de situatie beter uit te leggen
             </p>
             <div class="inputIcon">
-              <input
-                type="text"
+              <textarea
                 id="verb-vlER-melden-situatie"
                 name="verb-vlER-melden-situatie"
                 placeholder="Tik om een beschrijving toe te voegen"
                 readonly
-              />
+              ></textarea>
             </div>
           </div>
         </div>
@@ -115,13 +114,12 @@
               Tip: stel een realistisch doel en omschrijf dit in detail.
             </p>
             <div class="inputIcon">
-              <input
-                type="text"
+              <textarea
                 id="omschrijving_vlER_verbeteractie"
                 name="omschrijving_vlER_verbeteractie"
                 placeholder="Tik om een beschrijving toe te voegen"
                 readonly
-              />
+              ></textarea>
             </div>
           </div>
         </div>
@@ -137,13 +135,12 @@
               voor het behalen van het doel.
             </p>
             <div class="inputIcon">
-              <input
-                type="text"
+              <textarea
                 id="omschrijving_vlER_geslaagd"
                 name="omschrijving_vlER_geslaagd"
                 placeholder="Tik om een beschrijving toe te voegen"
                 readonly
-              />
+              ></textarea>
             </div>
           </div>
         </div>
@@ -164,7 +161,7 @@
                 type="text"
                 id="evaluatie_datum"
                 name="evaluatie_datum"
-                value="03-06-2022"
+                value="11-01-2022"
               />
             </div>
           </div>
@@ -180,7 +177,7 @@
                 type="text"
                 id="herevaluatie_datum"
                 name="herevaluatie_datum"
-                value="03-09-2022"
+                value="11-03-2022"
               />
             </div>
           </div>
@@ -195,14 +192,31 @@
             </p>
 
             <!-- checkbox verbazing opgelost?  -->
+            <div class="toggleWrapper">
+              <label class="switch" for="vl-er-opgelost">
+                <input
+                  type="checkbox"
+                  id="vl-er-opgelost"
+                  onclick="return false;"
+                  readonly
+                  checked
+                />
+                <div class="slider round"></div>
+              </label>
+              <p class="toggle-text">
+                <span class="toggle-text vl-er-opgelost-text"
+                  >Ja de verbazing is opgelost</span
+                >
+              </p>
+            </div>
+
             <div class="inputIcon">
-              <input
-                type="text"
+              <textarea
                 id="vlER-evaluatie"
                 name="vlER-evaluatie"
                 placeholder="Tik om een beschrijving toe te voegen"
                 readonly
-              />
+              ></textarea>
             </div>
 
             <!-- checkbox succes vermedlen  -->

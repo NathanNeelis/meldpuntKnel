@@ -215,7 +215,8 @@
 
 /* -----------------  Pauzes  -----------------  */
 /* check content.css for more oz-incidenten styling  */
-.oz-pauzes {
+.oz-pauzes,
+.oz-visite {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -130,8 +130,10 @@
 .verbazingMelden,
 .verbazingDetails,
 .verbazingOverzicht,
+.verbazingOverzichtRP,
 .inputPage,
-.inputPageVLER {
+.inputPageVLER,
+.inputPageRP {
   /* background-color: coral; */
   width: 26vw;
   position: relative;

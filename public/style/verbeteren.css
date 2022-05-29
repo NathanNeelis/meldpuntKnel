@@ -188,6 +188,10 @@
   display: none;
 }
 
+.btn-small.inactive {
+  display: none;
+}
+
 .btn-ver-info-wrapper {
   display: flex;
   width: 100%;
@@ -422,6 +426,21 @@
   width: 100%;
 }
 
+.verb-melden-form textarea {
+  min-height: 6rem;
+  width: calc(26vw - 5rem);
+  border: none;
+  font-family: var(--mainFont);
+  position: relative;
+  padding: 1rem 0 1rem 1.5rem;
+  overflow-y: hidden;
+}
+
+.verb-melden form textarea::placeholder {
+  font-family: var(--mainFont);
+  color: var(--grey);
+}
+
 .verb-melden-form input::placeholder {
   color: var(--lightgrey);
   font-family: var(--mainFont);
@@ -434,7 +453,7 @@
 .inputIcon::after {
   content: "";
   position: absolute;
-  top: calc(50% - 0.5rem);
+  top: 1.2rem;
   left: 0;
   width: 1rem;
   height: 1rem;
@@ -680,11 +699,13 @@
 /* -----------------  Verbazing overzicht  -----------------  */
 /* -----------------  Verbazing overzicht  -----------------  */
 
-.verbazingOverzicht {
+.verbazingOverzicht,
+.verbazingOverzichtRP {
   display: none;
 }
 
-.verbazingOverzicht.active {
+.verbazingOverzicht.active,
+.verbazingOverzichtRP.active {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -912,6 +933,53 @@
   justify-content: center;
 }
 
+.cta-nieuw {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.cta-nieuw-rp.inactive {
+  display: none;
+}
+
+.btn-oppakken {
+  margin-left: 4rem;
+}
+
+.cta-bespreken {
+  border: 2px solid var(--blue);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cta-bespreken::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 0.3rem;
+  right: -1.3rem;
+
+  background-image: url(/images/icons/arrowRight-aqua.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1rem;
+}
+
+.cta-bespreken:hover {
+  border-bottom: 2px solid var(--aqua);
+}
+
 /* -----------------  Verbazing melding   -----------------  */
 /* -----------------  Verbazing melding  -----------------  */
 /* -----------------  Verbazing melding  -----------------  */
@@ -940,6 +1008,10 @@
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+}
+
+.verantwoordelijkeIcon.inactive {
+  display: none;
 }
 
 .verantwoordelijkeIcon input {
@@ -1005,12 +1077,20 @@
 /* -----------------  Witte blokken scrollbar  -----------------  */
 
 /* width */
-.verbazingMelden-content::-webkit-scrollbar,
+
 .verbazingOverzicht-content::-webkit-scrollbar,
 .lc-verbeteren::-webkit-scrollbar,
 .mc-verbeteren::-webkit-scrollbar,
 .rc-verbeteren::-webkit-scrollbar {
   width: 10px;
+}
+
+.inputPage::-webkit-scrollbar,
+.inputPageVLER::-webkit-scrollbar,
+.inputPageRP::-webkit-scrollbar,
+.verbazingMelden-content::-webkit-scrollbar,
+.verbazingDetails-content::-webkit-scrollbar {
+  width: 0px;
 }
 
 /* Track */
@@ -1022,6 +1102,10 @@
   background: var(--white);
 }
 
+.verbazingDetails-content::-webkit-scrollbar-track {
+  background: var(--verylightgrey);
+}
+
 /* Handle */
 .verbazingOverzicht-content::-webkit-scrollbar-thumb,
 .lc-verbeteren::-webkit-scrollbar-thumb,
@@ -1030,15 +1114,82 @@
   background: var(--white);
 }
 
+.verbazingDetails-content::-webkit-scrollbar-thumb,
 .verbazingMelden-content::-webkit-scrollbar-thumb {
   background: var(--grey);
 }
 
 /* Handle on hover */
+.verbazingDetails-content::-webkit-scrollbar-thumb:hover,
 .verbazingOverzicht-content::-webkit-scrollbar-thumb:hover,
 .verbazingMelden-content::-webkit-scrollbar-thumb:hover,
 .lc-verbeteren::-webkit-scrollbar-thumb:hover,
 .mc-verbeteren::-webkit-scrollbar-thumb:hover,
 .rc-verbeteren::-webkit-scrollbar-thumb:hover {
   background: var(--grey);
+}
+
+/* TOGGLE  */
+.toggleWrapper {
+  margin: 1rem 1rem 1rem 0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.toggle-text {
+  color: var(--grey);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+.switch {
+  display: inline-block;
+  height: 17px;
+  position: relative;
+  width: 30px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 2px;
+  content: "";
+  height: 13px;
+  left: 2px;
+  position: absolute;
+  transition: 0.4s;
+  width: 13px;
+}
+
+input:checked + .slider {
+  background-color: var(--aqua);
+}
+
+input:checked + .slider:before {
+  transform: translateX(13px);
+}
+
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
