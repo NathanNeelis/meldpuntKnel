@@ -22,41 +22,10 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   // do crazy cool things
 
-  if (
-    event.request.method === "GET" &&
-    CORE_ASSETS.includes(getPathName(event.request.url))
-  ) {
-    // cache only strategy --> CSS / JS / etc..
-    event.respondWith(
-      caches
-        .open(CORE_CACHE_NAME)
-        .then((cache) => cache.match(event.request.url))
-    );
-  }
-
-  // MOVIE PAGE SPECIFIC
-  else if (
-    htmlGetRequest(event.request) &&
-    event.request.url.match("/movies")
-  ) {
-    // resource targetting url by client https://github.com/w3c/ServiceWorker/issues/985#issuecomment-253755588
-    // resource: https://stackoverflow.com/questions/45663796/setting-service-worker-to-exclude-certain-urls-only/45670014#45670014
-
-    // If there is internet, save the HTML to cache
-    // If there is no internet, find the cache and open the /movies page
-    event.respondWith(
-      fetchAndCache(event.request, "html-cache").catch(() => {
-        return caches
-          .open("html-cache")
-          .then((cache) => cache.match("/offline"));
-      })
-    );
-  }
-
   // html get request
   // If the page is in the chache, open the page through the cashe for faster loading
   // Update the cache in the meanwhile, next page visits include the updates.
-  else if (htmlGetRequest(event.request)) {
+  if (htmlGetRequest(event.request)) {
     event.respondWith(
       caches
         .open("html-cache")
@@ -71,7 +40,7 @@ self.addEventListener("fetch", (event) => {
         })
     );
 
-    event.waitUntil(fetchAndCache(event.request, "html-cache"));
+    // event.waitUntil(fetchAndCache(event.request, "html-cache"));
   }
 });
 
