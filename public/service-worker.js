@@ -19,25 +19,7 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  event.waitUntil(clients.claim()); // Service workers works direct instead after a reload in multiple browser tabs
-  // resource https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim
   console.log("activate service worker. Removing old cache versions if needed");
-
-  // removes old cache if version is updated
-  event.waitUntil(
-    caches
-      .keys() // RESOURCE https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage // https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/keys
-      .then((keylist) => {
-        return Promise.all([
-          keylist
-            .filter(
-              (cacheKey) =>
-                cacheKey.includes("mk-cache") && cacheKey !== CORE_CACHE_NAME
-            ) // array of strings with caches that include fam-cache but are not the current version
-            .forEach((outdatedCache) => caches.delete(outdatedCache)),
-        ]);
-      })
-  );
 });
 
 self.addEventListener("fetch", (event) => {
@@ -52,26 +34,6 @@ self.addEventListener("fetch", (event) => {
       caches
         .open(CORE_CACHE_NAME)
         .then((cache) => cache.match(event.request.url))
-    );
-  }
-
-  // html get request
-  // open the page the normal way
-  // save the page in the cache
-  // if offline, open the page from the chache if it is available
-  // otherwise show offline page
-  else if (htmlGetRequest(event.request)) {
-    event.respondWith(
-      fetchAndCache(event.request, "html-cache").catch(() => {
-        return caches
-          .open("html-cache")
-          .then((cache) => cache.match(event.request.url))
-          .catch(() => {
-            return caches
-              .open(CORE_CACHE_NAME)
-              .then((cache) => cache.match("/offline"));
-          });
-      })
     );
   }
 });
