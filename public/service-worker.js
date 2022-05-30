@@ -21,27 +21,25 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   // do crazy cool things
-
   // html get request
   // If the page is in the chache, open the page through the cashe for faster loading
   // Update the cache in the meanwhile, next page visits include the updates.
-  if (htmlGetRequest(event.request)) {
-    event.respondWith(
-      caches
-        .open("html-cache")
-        .then((cache) => cache.match(event.request))
-        .then((response) =>
-          response ? response : fetchAndCache(event.request, "html-cache")
-        )
-        .catch(() => {
-          return caches
-            .open(CORE_CACHE_NAME)
-            .then((cache) => cache.match("/offline"));
-        })
-    );
-
-    // event.waitUntil(fetchAndCache(event.request, "html-cache"));
-  }
+  // if (htmlGetRequest(event.request)) {
+  //   event.respondWith(
+  //     caches
+  //       .open("html-cache")
+  //       .then((cache) => cache.match(event.request))
+  //       .then((response) =>
+  //         response ? response : fetchAndCache(event.request, "html-cache")
+  //       )
+  //       .catch(() => {
+  //         return caches
+  //           .open(CORE_CACHE_NAME)
+  //           .then((cache) => cache.match("/offline"));
+  //       })
+  //   );
+  // event.waitUntil(fetchAndCache(event.request, "html-cache"));
+  // }
 });
 
 // HELPER FUNCTIONS ----------------
