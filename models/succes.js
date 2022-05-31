@@ -23,5 +23,5 @@ const succesSchema = new mongoose.Schema({
   },
 });
 
-const Verbazingen = mongoose.model("successen", succesSchema);
-module.exports = Verbazingen;
+const Successen = mongoose.model("successen", succesSchema);
+module.exports = Successen;

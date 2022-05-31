@@ -1,0 +1,80 @@
+<form
+  action="/wijkkliniek"
+  class="wk-edit-form"
+  id="wk-edit-form"
+  method="POST"
+>
+  <div class="totaalBeddenEdit">
+    <h4>Bedden</h4>
+    <div class="editBedden">
+      <div class="minus">
+        <img src="images/icons/ic-minus.svg" alt="" />
+      </div>
+      <input
+        type="text"
+        value="<%= wijkkliniek.totaalBedden %>"
+        name="totaalBeddenInput"
+        id="totaalBeddenInput"
+        class="totaalBeddenInput"
+      />
+      <div class="plus">
+        <img src="images/icons/ic-plus.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="oz-wk-info-edit">
+    <div class="opnames">
+      <h4>Opnames</h4>
+      <div class="opname-icon-wrapper" id="opname-icon-wrapper">
+        <div class="opname-usericons-wrapper" id="opname-usericons-wrapper">
+          <% for (let i = 5 - wijkkliniek.opnames; i < 5; i++) { %>
+          <div class="ono"></div>
+          <% } %>
+        </div>
+
+        <div class="addBtn wk addOno">
+          <!-- <%- include('../atoms/plusSvg.ejs'); %> -->
+          <img src="images/icons/ic-plus.svg" alt="" />
+        </div>
+        <!-- <img src="images/icons/ic-person.svg" alt="icon for a person" /> -->
+        <!-- <img src="images/icons/ic-person.svg" alt="icon for a person" /> -->
+      </div>
+      <input
+        type="number"
+        value="<%= wijkkliniek.opnames %>"
+        name="totaalOpnameInput"
+        id="totaalOpnameInput"
+        class="totaalOpnameInput"
+      />
+    </div>
+    <div class="ontslagen">
+      <h4>Ontslagen</h4>
+      <div class="ontslag-icon-wrapper" id="ontslag-icon-wrapper">
+        <div class="ontslag-usericons-wrapper" id="ontslag-usericons-wrapper">
+          <% for (let i = 5 - wijkkliniek.ontslagen; i < 5; i++) { %>
+          <div class="opo"></div>
+          <% } %>
+        </div>
+        <div class="addBtn wk addOpo">
+          <img src="images/icons/ic-plus.svg" alt="" />
+        </div>
+      </div>
+      <input
+        type="text"
+        value="<%= wijkkliniek.ontslagen %>"
+        name="totaalOntslagInput"
+        id="totaalOntslagInput"
+        class="totaalOntslagInput"
+      />
+    </div>
+  </div>
+
+  <div class="wk-edit-btn">
+    <button form="wk-edit-form" type="submit" class="submitEditForm">
+      <!-- <div class="backBtn"> -->
+      <img src="images/icons/arrowLeft.svg" alt="back icon" />
+      <!-- </div> -->
+    </button>
+  </div>
+</form>

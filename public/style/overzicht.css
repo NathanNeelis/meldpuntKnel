@@ -11,6 +11,14 @@
   flex-direction: column;
   justify-content: flex-start;
   overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.oz-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 /* width */
@@ -33,11 +41,21 @@
   background: var(--grey);
 }
 
-.oz-wk-wrapper {
+.oz-wk-wrapper,
+.oz-wk-edit-wrapper {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.oz-wk-wrapper.active,
+.oz-wk-edit-wrapper.active {
+  visibility: initial;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .totaalBedden {
@@ -50,8 +68,174 @@
   align-items: center;
 }
 
+.wk-edit-form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+
+  position: relative;
+}
+
+.submitEditForm {
+  border: none;
+  position: absolute;
+  top: -3.8rem;
+  left: 1rem;
+
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--aqua);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.submitEditForm:hover {
+  transform: scale(1.2);
+}
+
+.submitEditForm img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.totaalBeddenEdit {
+  width: 15rem;
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editBedden {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0.5rem;
+}
+
+.totaalBeddenInput {
+  width: 4rem;
+  height: 2rem;
+  /* padding: 2rem 1rem; */
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.totaalOpnameInput,
+.totaalOntslagInput {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.minus,
+.plus {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--aqua);
+  border-radius: 50%;
+  margin: 0 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus img {
+  width: 0.75rem;
+}
+
+.minus img {
+  width: 0.65rem;
+}
+
+.opname-icon-wrapper,
+.ontslag-icon-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.addBtn.wk {
+  margin-left: 1rem;
+}
+
+.addOno,
+.addOpo {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--aqua);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.opname-usericons-wrapper,
+.ontslag-usericons-wrapper {
+  display: flex;
+}
+
+.opnames .opname-icon-wrapper .addOno img,
+.ontslagen .ontslag-icon-wrapper .addOpo img {
+  max-width: 1rem;
+  max-height: 1rem;
+  margin-top: 0;
+}
+
+.ono,
+.opo {
+  margin: 0.7rem 0.3rem 0 0;
+  width: 1.4vw;
+  height: 2.5rem;
+  background-image: url(/images/icons/ic-person.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.4vw;
+  position: relative;
+}
+
+.ono::after,
+.opo::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--aqua);
+  background-image: url(/images/icons/ic-minus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.5rem;
+
+  position: absolute;
+  top: -0.2rem;
+  right: -0.2rem;
+}
+
 .oz-wk-info {
   width: 45%;
+  margin-top: 1rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.oz-wk-info-edit {
+  width: 12rem;
   margin-top: 1rem;
 
   display: flex;

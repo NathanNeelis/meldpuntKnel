@@ -1,6 +1,7 @@
 const User = require("../models/user");
 const Verbazingen = require("../models/verbazing");
 const Successen = require("../models/succes");
+const WijkKliniek = require("../models/wijkkliniek");
 const getCurrentDate = require("../views/utils/getCurrentDate");
 
 // export
@@ -14,6 +15,9 @@ async function home(req, res) {
 
   const successen = (await Successen.find()).reverse();
   console.log("successen", successen);
+
+  const wijkkliniek = await WijkKliniek.find();
+  console.log("wijkkliniek", wijkkliniek[0]);
 
   const initials = user.firstName.charAt(0) + user.lastName.charAt(0);
   const currentDate = getCurrentDate();
@@ -34,6 +38,7 @@ async function home(req, res) {
 
       verbazingen: verbazingen,
       successen: successen,
+      wijkkliniek: wijkkliniek[0],
     });
   }
 }
