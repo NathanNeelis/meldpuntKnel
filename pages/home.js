@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const Verbazingen = require("../models/verbazing");
+const Successen = require("../models/succes");
 const getCurrentDate = require("../views/utils/getCurrentDate");
 
 // export
@@ -8,8 +9,11 @@ async function home(req, res) {
     email: req.session.user.user.email,
   });
 
-  const verbazingen = await Verbazingen.find();
+  const verbazingen = (await Verbazingen.find()).reverse();
   console.log("verbazingen", verbazingen);
+
+  const successen = (await Successen.find()).reverse();
+  console.log("successen", successen);
 
   const initials = user.firstName.charAt(0) + user.lastName.charAt(0);
   const currentDate = getCurrentDate();
@@ -29,6 +33,7 @@ async function home(req, res) {
       currentDate: currentDate,
 
       verbazingen: verbazingen,
+      successen: successen,
     });
   }
 }

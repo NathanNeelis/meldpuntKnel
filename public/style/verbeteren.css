@@ -1,10 +1,11 @@
-.lc-verbeteren {
+.lc-verbeteren,
+.rc-verbeteren {
   display: none;
 }
 
 .lc-verbeteren.active,
 .mc-verbeteren,
-.rc-verbeteren {
+.rc-verbeteren.active {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -70,7 +71,8 @@
   color: var(--lightgrey);
 }
 
-.lc-nieuwe-verbazing {
+.lc-nieuwe-verbazing,
+.rc-nieuwe-verbazing {
   width: 100%;
   height: 4rem;
   background-color: var(--lightgrey);
@@ -335,15 +337,17 @@
   font-weight: 200;
 }
 
-/* -----------------  Verbazing melden  -----------------  */
+/* -----------------  Verbazing  en succes melden  -----------------  */
 /* -----------------  Verbazing melden  -----------------  */
 /* -----------------  Verbazing melden  -----------------  */
 
-.verbazingMelden {
+.verbazingMelden,
+.succesMelden {
   display: none;
 }
 
-.verbazingMelden.active {
+.verbazingMelden.active,
+.succesMelden.active {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -391,11 +395,13 @@
 
 /* FORM MELDEN  */
 
-.verb-melden-form fieldset {
+.verb-melden-form fieldset,
+.succes-melden-form fieldset {
   border: none;
 }
 
-.verb-melden-form legend {
+.verb-melden-form legend,
+.succes-melden-form legend {
   display: none;
 }
 
@@ -413,12 +419,14 @@
   width: 80%;
 }
 
-.verb-melden-form label {
+.verb-melden-form label,
+.succes-melden-form label {
   color: var(--blue);
   font-weight: 600;
 }
 
-.verb-melden-form input {
+.verb-melden-form input,
+.succes-melden-form input {
   border: none;
   position: relative;
   padding: 1rem 0 1rem 1.5rem;
@@ -426,7 +434,8 @@
   width: 100%;
 }
 
-.verb-melden-form textarea {
+.verb-melden-form textarea,
+.succes-melden-form textarea {
   min-height: 6rem;
   width: calc(26vw - 5rem);
   border: none;
@@ -436,12 +445,14 @@
   overflow-y: hidden;
 }
 
-.verb-melden form textarea::placeholder {
+.verb-melden-form textarea::placeholder,
+.succes-melden-form textarea::placeholder {
   font-family: var(--mainFont);
-  color: var(--grey);
+  color: var(--lightgrey);
 }
 
-.verb-melden-form input::placeholder {
+.verb-melden-form input::placeholder,
+.succes-melden-form input::placeholder {
   color: var(--lightgrey);
   font-family: var(--mainFont);
 }

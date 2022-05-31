@@ -1,0 +1,26 @@
+<!-- DYNAMISCHE VERBAZINGEN  -->
+<% for (let i = 0; i < successen.length; i++) { %>
+
+<div class="successen">
+  <!-- verbazing header  -->
+  <div class="verb-active-header">
+    <!-- datum -->
+    <p class="verb-date"><%= successen[i].datum %></p>
+
+    <!-- verbazing status  -->
+    <div class="verb-status">
+      <div class="status-icon"></div>
+      <p class="verb-status-text">nieuw</p>
+    </div>
+
+    <!-- verantwoordelijke  -->
+    <div class="verb-user"><%= successen[i].initials_melder %></div>
+  </div>
+
+  <!-- verbazing title  -->
+  <div class="verb-info">
+    <h4><%= successen[i].title%></h4>
+  </div>
+</div>
+
+<% } %>

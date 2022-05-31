@@ -1,5 +1,7 @@
 const verbazingen = document.querySelector(".lc-verbeteren");
+const successen = document.querySelector(".rc-verbeteren");
 const verbazingMelden = document.querySelector(".verbazingMelden");
+const succesMelden = document.querySelector(".succesMelden");
 const verbazingOverzicht = document.querySelector(".verbazingOverzicht");
 const verbazingOverzichtRP = document.querySelector(".verbazingOverzichtRP");
 const vochtlijstenMeldingDetails = document.querySelector(
@@ -17,7 +19,9 @@ const rapportagesBespreken = document.querySelector(
   ".verb-rapportages-bespreken"
 );
 const verbazingMeldenBtn = document.querySelector(".lc-nieuwe-verbazing");
+const succesMeldenBtn = document.querySelector(".rc-nieuwe-verbazing");
 const backToVerbazingen = document.querySelectorAll(".backToVerbazingen");
+const backToSuccessen = document.querySelectorAll(".backToSuccessen");
 const backToVerbazingsOverzicht = document.querySelectorAll(
   ".backToVerbazingsOverzicht"
 );
@@ -98,6 +102,12 @@ verbazingMeldenBtn.addEventListener("click", (e) => {
   verbazingMelden.classList.add("active");
 });
 
+// succes melden
+succesMeldenBtn.addEventListener("click", (e) => {
+  successen.classList.remove("active");
+  succesMelden.classList.add("active");
+});
+
 vochtlijsten.addEventListener("click", (e) => {
   verbazingen.classList.remove("active");
   verbazingMelden.classList.remove("active");
@@ -143,6 +153,14 @@ for (var i = 0; i < backToVerbazingen.length; i++) {
     verbazingOverzichtRP.classList.remove("active");
     vochtlijstenMeldingDetails.classList.remove("active");
     verbazingen.classList.add("active");
+  });
+}
+
+// back to successen
+for (var i = 0; i < backToSuccessen.length; i++) {
+  backToSuccessen[i].addEventListener("click", function (e) {
+    succesMelden.classList.remove("active");
+    successen.classList.add("active");
   });
 }
 

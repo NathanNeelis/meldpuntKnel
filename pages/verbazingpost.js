@@ -55,7 +55,7 @@ async function verbazingMelden(req, res, next) {
     if (err) {
       next(err);
     } else {
-      res.redirect("/");
+      res.redirect("/#innovation");
     }
   }
 }

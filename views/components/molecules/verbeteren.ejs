@@ -41,7 +41,7 @@
     </div>
   </div>
 
-  <div class="rc-verbeteren">
+  <div class="rc-verbeteren active">
     <h2>Successen</h2>
 
     <div class="lc-verbeteren-wrapper">
@@ -60,13 +60,18 @@
         <!-- when to submit?? -->
       </div>
 
-      <div class="lc-nieuwe-verbazing">
+      <div class="rc-nieuwe-verbazing">
         <div class="addBtn"><%- include('../atoms/plusSvg.ejs'); %></div>
         <p>een succes toevoegen</p>
       </div>
 
       <!-- verbazing -->
-      <%- include('../atoms/successen.ejs'); %>
+      <% if (successen.length > 0) { %> <%-
+      include('../atoms/succes-dynamisch.ejs'); %> <% } %> <%-
+      include('../atoms/successen.ejs'); %>
     </div>
   </div>
+
+  <!-- succes melden -->
+  <%- include('../atoms/succesMelden.ejs'); %>
 </section>

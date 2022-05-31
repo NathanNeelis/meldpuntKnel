@@ -24,6 +24,9 @@
     </div>
 
     <!-- verbazing -->
-    <%- include('../atoms/verbazing.ejs'); %>
+
+    <% if (verbazingen.length > 0) { %> <%-
+    include('../atoms/verbazing-dynamisch.ejs'); %> <% } %> <%-
+    include('../atoms/verbazing.ejs'); %>
   </div>
 </div>

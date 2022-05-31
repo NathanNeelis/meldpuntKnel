@@ -133,7 +133,8 @@
 .verbazingOverzichtRP,
 .inputPage,
 .inputPageVLER,
-.inputPageRP {
+.inputPageRP,
+.succesMelden {
   /* background-color: coral; */
   width: 26vw;
   position: relative;

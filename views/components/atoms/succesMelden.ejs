@@ -1,0 +1,78 @@
+<div class="succesMelden">
+  <div class="standard-header">
+    <div class="blueBar"></div>
+    <div class="backBtn backToSuccessen">
+      <img src="images/icons/arrowLeft.svg" alt="back icon" />
+    </div>
+  </div>
+
+  <div class="verbazingMelden-content">
+    <h2>Een succes toevoegen</h2>
+
+    <div class="verb-melden-form-wrapper">
+      <form
+        action="/succes"
+        class="succes-melden-form"
+        id="succes-melden-form"
+        method="POST"
+      >
+        <!-- <h2>Registreren bij Meldpunt Knel</h2> -->
+        <fieldset>
+          <legend>Een succes toevoegenn</legend>
+
+          <!-- Title-->
+          <div class="verb-melden-formfield-wrapper">
+            <div class="inner-formfield-wrapper">
+              <label for="succesTitle">Wat is het succes?</label>
+              <div class="inputIcon">
+                <input
+                  type="text"
+                  id="succesTitle"
+                  class="verb-melden-title"
+                  name="succesTitle"
+                  placeholder="Tik om een onderwerp toe te voegen"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="verb-melden-formfield-wrapper">
+            <div class="inner-formfield-wrapper">
+              <label for="succesOmshrijving">Omschrijving van het succes</label>
+              <p class="form-tip"></p>
+              <div class="inputIcon">
+                <textarea
+                  type="text"
+                  id="succesOmshrijving"
+                  name="succesOmshrijving"
+                  placeholder="Tik om een beschrijving toe te voegen"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="verb-melden-formfield-btn-wrapper">
+          <div class="attention">
+            <p class="attention-icon">💡</p>
+            <h4>Bespreek het succes</h4>
+            <p class="attention-text">
+              Bespreek het succes tijdens het kwart voor twee momentje. Het is
+              namelijk ook wel eens leuk om te horen wat er goed gaat!
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="verb-melden-submitBtn-wrapper">
+    <button
+      form="succes-melden-form"
+      type="submit"
+      class="submitBtn succes-melden-submitBtn"
+    >
+      succes toevoegen
+    </button>
+  </div>
+</div>

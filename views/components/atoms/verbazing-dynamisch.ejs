@@ -1,0 +1,30 @@
+<!-- DYNAMISCHE VERBAZINGEN  -->
+<% for (let i = 0; i < verbazingen.length; i++) { %>
+
+<div class="verbazing-active">
+  <!-- verbazing header  -->
+  <div class="verb-active-header unknownUser">
+    <!-- datum -->
+    <p class="verb-date"><%= verbazingen[i].melding[0].melding_datum %></p>
+
+    <!-- verbazing status  -->
+    <div class="verb-status">
+      <div class="status-icon"></div>
+      <p class="verb-status-text verb-rp-status-text">nieuw</p>
+    </div>
+
+    <!-- verantwoordelijke  -->
+    <div class="verb-user verb-rp-verantwoordelijke">?</div>
+  </div>
+  <!-- verbazing title  -->
+  <div class="verb-info">
+    <h4><%= verbazingen[i].title %></h4>
+
+    <!-- call to action  -->
+    <div class="btn-ver-info-wrapper">
+      <div class="btn-small btn-rp-oppakken1">Ik pak het op</div>
+    </div>
+  </div>
+</div>
+
+<% } %>
