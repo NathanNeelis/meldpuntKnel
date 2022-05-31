@@ -192,3 +192,33 @@
   font-size: 2.3rem;
   font-weight: 800;
 }
+
+/* -----------------  Witte blokken scrollbar  -----------------  */
+
+/* width */
+.lc-profiel::-webkit-scrollbar,
+.mc-profiel::-webkit-scrollbar,
+.rc-profiel::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.lc-profiel::-webkit-scrollbar-track,
+.mc-profiel::-webkit-scrollbar-track,
+.rc-profiel::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+/* Handle */
+.lc-profiel::-webkit-scrollbar-thumb,
+.mc-profiel::-webkit-scrollbar-thumb,
+.rc-profiel::-webkit-scrollbar-thumb {
+  background: var(--white);
+}
+
+/* Handle on hover */
+.lc-profiel::-webkit-scrollbar-thumb:hover,
+.mc-profiel::-webkit-scrollbar-thumb:hover,
+.rc-profiel::-webkit-scrollbar-thumb:hover {
+  background: var(--grey);
+}
