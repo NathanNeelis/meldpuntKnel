@@ -42,3 +42,23 @@ p {
 .vp-btn {
   margin: 0;
 }
+
+/* width */
+html::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+html::-webkit-scrollbar-track {
+  background: var(--white);
+}
+
+/* Handle */
+html::-webkit-scrollbar-thumb {
+  background: var(--white);
+}
+
+/* Handle on hover */
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--grey);
+}
