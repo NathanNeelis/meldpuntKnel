@@ -89,7 +89,8 @@
   font-weight: 700;
 }
 
-.lc-nieuwe-verbazing:hover {
+.lc-nieuwe-verbazing:hover,
+.rc-nieuwe-verbazing:hover {
   opacity: 1;
 }
 

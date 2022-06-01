@@ -113,6 +113,10 @@
   fill: var(--white);
 }
 
+.addBtn:hover {
+  transform: scale(1.2);
+}
+
 /* back button  */
 .backBtn {
   width: 2rem;
