@@ -11,13 +11,8 @@ async function home(req, res) {
   });
 
   const verbazingen = (await Verbazingen.find()).reverse();
-  console.log("verbazingen", verbazingen);
-
   const successen = (await Successen.find()).reverse();
-  console.log("successen", successen);
-
   const wijkkliniek = await WijkKliniek.find();
-  console.log("wijkkliniek", wijkkliniek[0]);
 
   const initials = user.firstName.charAt(0) + user.lastName.charAt(0);
   const currentDate = getCurrentDate();
